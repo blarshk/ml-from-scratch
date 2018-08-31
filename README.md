@@ -4,4 +4,4 @@ This repo contains a bunch of from-scratch implementations of common machine lea
 
 # Simple and Multiple Linear Regression
 
-The simple and multiple linear regression exercises were largely taken/followed from (Mubaris)[https://mubaris.com/2017/09/28/linear-regression-from-scratch/].
+The simple and multiple linear regression exercises were largely taken/followed from [Mubaris](https://mubaris.com/2017/09/28/linear-regression-from-scratch/).
