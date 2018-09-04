@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from tqdm import tqdm
 
 from sklearn.metrics import mean_squared_error
 
@@ -22,17 +23,18 @@ def main():
 
   costs = np.zeros(epochs)
 
-  for epoch in range(epochs):
-    h = x.dot(b)
-    loss = h - y
+  for epoch in tqdm(range(epochs)):
+    intermediate_prediction = x.dot(b)
+    loss = intermediate_prediction - y
     gradient = x.T.dot(loss) / m
     b = b - learning_rate * gradient
+    
     cost = cost_function(x, y, b)
     costs[epoch] = cost
 
   print("b: ", b)
   print(costs[-1])
-  
+
   preds = x.dot(b)
 
   print(np.sqrt(mean_squared_error(y, preds)))
